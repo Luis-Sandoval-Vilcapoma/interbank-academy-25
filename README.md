@@ -5,15 +5,32 @@ Este reto consiste en procesar información de transacciones bancarias mediante 
 
 ## Instrucciones de ejecucción:
 ### Requisitos previos:
-  Tener instalado **Python 3.8 o superior**
-  De no tenerlo puede descargalo desde [python.org](https://www.python.org/downloads/).
+  Tener instalado **Python 3.8 o superior**, de no tenerlo puede descargalo desde [python.org](https://www.python.org/downloads/).
 
 ### Instalación de dependencias:
-  En la terminal ejecutar el codigo:
-  pip isntall pandas
+  Se requiere tener instalado la libreria **pandas** que nos ayudara con el analisis de datos. Si aún no la tienes, puedes instalarla ejecutando el siguiente comando en la terminal:
+
+  **`pip isntall pandas`**
+  
+  Este comando descargará e instalará la libreria.
+  
   ![Captura de Pantalla](https://drive.google.com/uc?id=1tFpBgIr2svo4I0BGR8LdlqxHp8aK2anx)
   
 ### Ejecutar aplicación:
+  Primero, abre la terminal (símbolo del sistema en Windows o Terminal en macOS/Linux).
+     
+  Luego, usa el comando `cd` (cambiar directorio) para navegar hasta la carpeta donde se encuentran los archivos de la aplicación.
+
+  **Ejemplo:**
+  - Si la carpeta de la aplicación está en `C:\MisArchivos\Aplicacion`, escribe en la terminal:
+      ```bash
+      cd C:\MisArchivos\Aplicacion
+      ```
+    Una vez que te encuentres en la carpeta correcta, puedes ejecutar el programa con el siguiente comando:
+    ```bash
+      python analysis.py
+      ```
+  ![Captura de Pantalla](https://drive.google.com/uc?export=view&id=1Ajb2eD-c4ww-s6tFq1lWvwbonN2mEV5J)
 
 ## Enfoque y solucción:
 ### Lógica implementada:
