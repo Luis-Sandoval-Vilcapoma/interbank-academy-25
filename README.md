@@ -34,13 +34,12 @@ Este reto consiste en procesar información de transacciones bancarias mediante 
 
 ## Enfoque y solucción:
 ### Lógica implementada:
-  1. El programa lee el archivo CSV con los datos de las transacciones
-  2. Verificamos los tipos de transacciones
-  3. Verificamos la cantidad de datos
-  4. Agrupamos y sumamos los montos por el tipo de transacción; al final, se restan para obtener el balance final
-  5. Mediante el comando `max()` obtenemos el monto mas alto y con el comando `idxmax()` obtenemos el ID de la transacción
-  6. Agrupamos por tipo de transacción y contamos el número de transacciones por tipo
-  7. Generamos el reporte de transacciones
+  1. El programa carga el archivo CSV con los datos de las transacciones.
+  2. Verificamos que no hay errores de tipografia en los tipos de transacciones.
+  3. Agrupamos los datos por tipo de transacción y sumamos los montos por cada tipo; al final, se restan para obtener el balance final.
+  5. Mediante el comando `max()` obtenemos el monto mas alto y con el comando `idxmax()` obtenemos el ID de la transacción.
+  6. Agrupamos por tipo de transacción y contamos el número de transacciones por tipo.
+  7. Generamos el reporte.
 
 ### Diseño:
 El diseño del programa fue sencillo y se centró en la eficiencia y la claridad del código. A continuación, se describen las decisiones clave tomadas durante el desarrollo:
@@ -48,8 +47,7 @@ El diseño del programa fue sencillo y se centró en la eficiencia y la claridad
   1. **Uso de pandas**: Elegí **pandas** como la librería principal para procesar el archivo CSV. Pandas es muy eficiente para manejar datos en forma de tablas y proporciona funciones rápidas para leer archivos CSV y filtrar datos. Además, ofrece un rendimiento sólido cuando se trabaja con archivos relativamente grandes.
   2. **Lectura del CSV**: Utilicé la función `pandas.read_csv()` para leer el archivo CSV, lo que permite cargar los datos en un **DataFrame**. Un DataFrame facilita la manipulación de datos y la ejecución de operaciones como la suma, el filtrado y el conteo.
   3. **Procesamiento de los Datos**: Tras cargar el archivo CSV en un DataFrame, utilicé las capacidades de pandas para filtrar las transacciones de tipo "Crédito" y "Débito", calcular el balance final y encontrar la transacción con el monto más alto. Las transacciones se procesan en tiempo lineal (O(n)), lo que significa que el rendimiento es óptimo incluso con archivos grandes.
-  4. **Manejo de Errores**: Se ha implementado un manejo básico de errores para asegurar que el archivo CSV exista y esté bien formado. Si el archivo no está en el formato correcto o contiene datos incorrectos, el programa genera un mensaje de error explicativo.
-  5. **Salida en la Terminal**: La salida del programa se presenta en la terminal, donde se muestra de manera clara y legible el balance final, la transacción de mayor monto y el conteo de transacciones.
+  4. **Salida en la Terminal**: La salida del programa se presenta en la terminal, donde se muestra de manera clara y legible el balance final, la transacción de mayor monto y el conteo por cada tipo de transacción.
 
 #### Decisiones de Diseño
 
